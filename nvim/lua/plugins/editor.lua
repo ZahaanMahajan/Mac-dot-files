@@ -23,14 +23,13 @@ return {
 			"nvim-telescope/telescope.nvim",
 			"nvim-lua/plenary.nvim",
 		},
-
 		keys = {
 			{ "sf", "<cmd>Yazi<CR>", desc = "Toggle Yazi" },
 		},
 	},
 
 	{
-		"echasnovski/mini.hipatterns",
+		"nvim-mini/mini.hipatterns",
 		event = "BufReadPre",
 		opts = {
 			highlighters = {
@@ -89,7 +88,7 @@ return {
 					local builtin = require("telescope.builtin")
 					builtin.find_files({
 						no_ignore = false,
-						hidden = true,
+						hidden = false,
 					})
 				end,
 				desc = "Lists files in your current working directory, respects .gitignore",
@@ -145,35 +144,13 @@ return {
 				end,
 				desc = "Lists Function names, variables, from Treesitter",
 			},
-			-- {
-			-- 	"sf",
-			-- 	function()
-			-- 		local telescope = require("telescope")
-			--
-			-- 		local function telescope_buffer_dir()
-			-- 			return vim.fn.expand("%:p:h")
-			-- 		end
-			--
-			-- 		telescope.extensions.file_browser.file_browser({
-			-- 			path = "%:p:h",
-			-- 			cwd = telescope_buffer_dir(),
-			-- 			respect_gitignore = false,
-			-- 			hidden = true,
-			-- 			grouped = true,
-			-- 			previewer = false,
-			-- 			initial_mode = "normal",
-			-- 			layout_config = { height = 40 },
-			-- 		})
-			-- 	end,
-			-- 	desc = "Open File Browser with the path of the current buffer",
-			-- },
 		},
 		config = function(_, opts)
 			local telescope = require("telescope")
 			local actions = require("telescope.actions")
 			local fb_actions = require("telescope").extensions.file_browser.actions
 
-			opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
+			opts.defaults = vim.tbl_deep_extend("force", opts.defaults or {}, {
 				wrap_results = true,
 				layout_strategy = "horizontal",
 				layout_config = { prompt_position = "top" },

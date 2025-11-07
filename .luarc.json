@@ -1,0 +1,18 @@
+{
+    "diagnostics.disable": [
+        "incomplete-signature-doc",
+        "trailing-space",
+        "undefined-field",
+        "duplicate-doc-alias",
+        "unused-local",
+        "param-type-mismatch",
+        "undefined-doc-name",
+        "lowercase-global",
+        "undefined-doc-class",
+        "cast-local-type"
+    ],
+    "diagnostics.globals": [
+        "LazyVim",
+        "MiniHipatterns"
+    ]
+}
