@@ -58,14 +58,11 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Flutter keymaps
 keymap.set("n", "flsp", "<cmd>FlutterLspRestart<CR>")
+keymap.set("n", "fpg", "<cmd>FlutterPubGet<CR>")
 keymap.set("n", "femu", "<cmd>FlutterEmulators<CR>")
-keymap.set("n", "fres", "<cmd>FlutterRestart<CR>")
 keymap.set("n", "fdev", "<cmd>FlutterDevices<CR>")
 keymap.set("n", "flc", "<cmd>FlutterLogClear<CR>")
-keymap.set("n", "frel", "<cmd>FlutterReload<CR>")
-keymap.set("n", "fpg", "<cmd>FlutterPubGet<CR>")
+keymap.set("n", "flt", "<cmd>FlutterLogToggle<CR>")
 keymap.set("n", "frun", "<cmd>FlutterRun<CR>")
---
---
---
---
+keymap.set("n", "frel", "<cmd>FlutterReload<CR>")
+keymap.set("n", "fres", "<cmd>FlutterRestart<CR>")

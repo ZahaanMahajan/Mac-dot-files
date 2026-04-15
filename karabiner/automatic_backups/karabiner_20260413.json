@@ -162,14 +162,6 @@
                     },
                     "ignore": false,
                     "ignore_vendor_events": true
-                },
-                {
-                    "identifiers": {
-                        "device_address": "c9-06-6a-29-6e-31",
-                        "is_keyboard": true,
-                        "is_pointing_device": true
-                    },
-                    "ignore": false
                 }
             ],
             "name": "Default profile",
