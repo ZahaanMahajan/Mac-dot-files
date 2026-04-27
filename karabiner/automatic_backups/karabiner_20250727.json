@@ -102,55 +102,6 @@
                         ]
                     },
                     {
-                        "description": "Change Ctrl + h/j/k/l to Arrows",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": {
-                                        "mandatory": ["control"],
-                                        "optional": ["caps_lock"]
-                                    }
-                                },
-                                "to": [{ "key_code": "left_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": ["control"],
-                                        "optional": ["caps_lock"]
-                                    }
-                                },
-                                "to": [{ "key_code": "down_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": {
-                                        "mandatory": ["control"],
-                                        "optional": ["caps_lock"]
-                                    }
-                                },
-                                "to": [{ "key_code": "up_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": {
-                                        "mandatory": ["control"],
-                                        "optional": ["caps_lock"]
-                                    }
-                                },
-                                "to": [{ "key_code": "right_arrow" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Map ctrl + [ to escape",
                         "manipulators": [
                             {
@@ -189,8 +140,8 @@
                 {
                     "identifiers": {
                         "is_keyboard": true,
-                        "product_id": 13330,
-                        "vendor_id": 14
+                        "product_id": 32624,
+                        "vendor_id": 6700
                     },
                     "simple_modifications": [
                         {
@@ -205,30 +156,20 @@
                 },
                 {
                     "identifiers": {
-                        "device_address": "c9-01-6a-29-6e-31",
                         "is_keyboard": true,
-                        "is_pointing_device": true
+                        "product_id": 32767,
+                        "vendor_id": 6700
                     },
-                    "ignore": false,
-                    "ignore_vendor_events": true
-                },
-                {
-                    "identifiers": {
-                        "device_address": "c9-06-6a-29-6e-31",
-                        "is_keyboard": true,
-                        "is_pointing_device": true
-                    },
-                    "ignore": false
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 20565,
-                        "vendor_id": 12815
-                    },
-                    "ignore": false,
-                    "treat_as_built_in_keyboard": true
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "left_command" },
+                            "to": [{ "key_code": "left_option" }]
+                        },
+                        {
+                            "from": { "key_code": "left_option" },
+                            "to": [{ "key_code": "left_command" }]
+                        }
+                    ]
                 }
             ],
             "name": "Default profile",
