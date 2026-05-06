@@ -94,10 +94,4 @@ return {
 			table.insert(opts.sources, { name = "emoji" })
 		end,
 	},
-
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		main = "ibl",
-		opts = {},
-	},
 }
