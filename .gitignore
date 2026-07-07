@@ -3,3 +3,5 @@ flutter/
 zed/
 git/
 colorls/
+
+.DS_Store
